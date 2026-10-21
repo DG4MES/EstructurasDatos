@@ -3,6 +3,7 @@
 #include <iostream>
 
 #include "Nodo.h"
+#include "Lista.h"
 
 using namespace std;
 
@@ -12,8 +13,9 @@ void Mayor();
 void Menor();
 void Buscar(int);
 void Modificar(int);
+void Eliminar();
 
-Nodo *I, *T, *F, *T2;
+Nodo *I, *T, *F, *T2, *A;
 
 int main(int argc, char** argv) {
     int _x = 0;
@@ -27,6 +29,7 @@ int main(int argc, char** argv) {
         cout << "4) Menor" << endl;
         cout << "5) Buscar" << endl;
         cout << "6) Modificar" << endl;
+        cout << "7) Borrar Registro" << endl;
         cout << "0) Salir" << endl;
         cout << "escoja una opcion: ";
         cin >> opt;
@@ -58,6 +61,20 @@ int main(int argc, char** argv) {
                 Modificar(num);
                 break;
             }
+            case 7: {
+                  int x;
+                  cout << "Ingrese numero a Eliminar: " << endl;
+                  cin >> x;
+                  Buscar(x);
+                  if(T == NULL){
+                     cout << "Registro no encontrado" << endl;
+                  } else {
+                     Eliminar();
+                     cout << "Registro eliminado " << T->id << endl;
+                  }
+                  break;
+            }
+
             case 0:
                 _x = 1;
                 break;
@@ -127,12 +144,13 @@ void Mayor(){
 void Buscar(int num){
     bool encontrado = false;
     T = I;
-
+    A == I;
     while(T != NULL && !encontrado){
         if(T->id == num){
             encontrado = true;
             cout << "Numero encontrado en la lista." << endl;
         } else {
+            A = T;
             T = T->sig;
         }
     }
@@ -151,3 +169,19 @@ void Modificar(int num){
         T->id = nuevoValor;
     }
 }
+
+
+void Eliminar(){
+  if(T == I){
+      I = I->sig;
+  } else if(F == T) {
+     A->sig = NULL;
+     F = A;
+  } else {
+     A->sig = T->sig;
+  }
+
+}
+
+
+
