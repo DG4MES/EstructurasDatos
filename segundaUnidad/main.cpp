@@ -188,11 +188,11 @@ void buscarL(int num){
 
 void eliminar(){
 	if(T == I){
-		T = T->sig;
-		T->ant = NULL;
+		I = T->sig;
+		I->ant = NULL;
 	} else if(T == F){
-		T = T->ant;
-		T->sig = NULL;
+		F = F->ant;
+		F->sig = NULL;
 	} else {
 		A = T;
 		A2 = T;
