@@ -28,6 +28,7 @@ int main(int argc, char** argv) {
         cout << "3) presentar Atras "<< endl;
         cout << "4) Buscar" << endl;
         cout << "5) Eliminar" <<endl;
+		cout << "6) Modificar" <<endl;
         cout << "0) Salir" << endl; 
         cout << "Escoja una opcion: ";
         cin >> opt;
@@ -64,6 +65,19 @@ int main(int argc, char** argv) {
             	cin >> num;
             	buscarL(num);
             	eliminar();
+				break;
+			}
+			
+			case 6: {
+				int num;
+				cout << "ingrese el numero: ";
+				cin >> num;
+				
+				buscarL(num);
+				int nuevo;
+				cout << "Ingrese el nuevo valor: ";
+				cin >> nuevo;
+				T->id = nuevo;
 				break;
 			}
                 
