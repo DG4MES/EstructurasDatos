@@ -4,7 +4,7 @@
 #include "Nodo.h"
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-Nodo *I, *T, *F, *A;
+Nodo *I, *T, *F, *A, *A2;
 
 using namespace std;
 
@@ -189,11 +189,14 @@ void buscarL(int num){
 void eliminar(){
 	if(T == I){
 		T = T->sig;
+		T->ant = NULL;
 	} else if(T == F){
 		T = T->ant;
+		T->sig = NULL;
 	} else {
 		A = T;
-		A = A->ant;
-		T = A;
+		A2 = T;
+		T = A->ant;
+		T->sig = A2->sig;
 	}
 }
