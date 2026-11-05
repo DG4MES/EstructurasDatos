@@ -22,12 +22,22 @@ void Agregar(int num) {
 }
 
 void proximo(){
-    I = I->sig;
+	if(I == NULL){
+		cout << "Lista Vacia" << endl;
+	} else {
+		I = I->sig;
+	}
+    
 }
 
 void ver(){
-    cout << "ID: " << I->id << endl;
+	if(I == NULL){
+		cout << "Lista Vacia" << endl;
+	} else {
+    	cout << "ID: " << I->id << endl;
+	}
 }
+
 ```
 
 # PILA
