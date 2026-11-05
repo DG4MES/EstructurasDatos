@@ -69,6 +69,10 @@ void pop(){
 }
 
 void peek(){
+    if(I == NULL){
+        cout << "La lista está vacia" << endl;
+    } else {
     cout << "ID: " << I->id << endl;
+    }
 }
 ```
