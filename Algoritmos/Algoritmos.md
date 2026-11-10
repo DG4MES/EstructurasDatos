@@ -76,3 +76,10 @@ void peek(){
     }
 }
 ```
+
+# Arbol Binario
+
+El arbol es una estructura de datos en donde se compara el valor de cada nodo para determinar si va a la
+derecha o a la izquierda el siguiente elemento
+
+
