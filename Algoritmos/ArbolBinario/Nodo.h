@@ -4,7 +4,7 @@
 class Nodo
 {
 	public:
-		Nodo();
+		//Nodo();
 		int id;
 		Nodo *R;
 		Nodo *L;

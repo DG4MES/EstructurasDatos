@@ -35,6 +35,7 @@ void Nuevo(int num){
 	}
 }
 
+
 void Agregar(Nodo *A){
 	if(T->id > A->id){
 		if(A->R == NULL){
@@ -55,8 +56,8 @@ int Presentar(Nodo *A){
 	if (A == NULL){
 		return 0;
 	} else {
-		cout << A->id << endl;
 		Presentar(A->L);
+		cout << A->id << endl;
 		Presentar(A->R);
 		return 0;
 	}
