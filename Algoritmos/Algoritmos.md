@@ -78,6 +78,17 @@ void peek(){
 ```
 
 # Arbol Binario
+```mermaid
+
+flowchart TD
+    A[I] -->|>| B(T1)
+    A --> |<| C(T2)
+    B --> |>| D(T3)
+    B --> |>| E(T5)
+    C --> |<| F(T4)
+    C --> |>| G(NULL)
+  
+```
 
 El arbol es una estructura de datos en donde se compara el valor de cada nodo para determinar si va a la
 derecha o a la izquierda el siguiente elemento.
