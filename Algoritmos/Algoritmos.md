@@ -85,8 +85,8 @@ flowchart TD
     A --> |<| C(T2)
     B --> |>| D(T3)
     B --> |<| E(T5)
-    C --> |<| F(T4)
-    C --> |>| G(NULL)
+    C --> |>| F(T4)
+    C --> |<| G(NULL)
   
 ```
 
