@@ -84,7 +84,7 @@ flowchart TD
     A[I] -->|>| B(T1)
     A --> |<| C(T2)
     B --> |>| D(T3)
-    B --> |>| E(T5)
+    B --> |<| E(T5)
     C --> |<| F(T4)
     C --> |>| G(NULL)
   
